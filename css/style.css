@@ -43,6 +43,21 @@ html , body
  font-weight: var(--font-weight-regular);
  color: var(--color-theme-dark);
 }
+.btn-theme{
+  background-color: var(--color-theme);
+  color: var(--color-white);
+  border-radius: var(--border-radius-medium);
+  font-weight: var(--font-weight-medium);
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+}
+.btn-theme:hover{
+  color: var(--color-theme-dark);
+}
+
+
+
+
 /************************top-menu **************/
   
 /* top-menu */
@@ -53,57 +68,150 @@ html , body
 .top-menu > .container {
         height: 100% ;
         display: flex ;
-        justify-content: space-between ;
+        justify-content: end ;
          align-items: center ;
+         padding: 0;
 }
-.top-menu .menu-links {
+/*.top-menu .menu-links {
     padding: 0 .8rem 0 ;
-}
+}*/
 .top-menu a{
          color: var(--color-white) ;
          text-decoration: none;
          margin:0 1.2rem;
 }
 
-.top-menu a:hover {
-     color: var(--color-theme-dark) ;
-}
+                  .top-menu .menu-links a:hover {
+                      color: var(--color-theme-dark) ;
+                  }
 
-.top-menu .social-media {
-    margin-left: 1em ;
-}
-.top-menu .social-media a {
-      margin: 0 0.3rem ;
-}
-.top-menu .social-media a :last-child {
-    margin : 0 0 0 0.3rem ;
-}
-.top-menu .dropdown-theme button {
-    background-color: var(--color-theme) ; 
-    color: var(--color-white) ;
-    border: none;
-}
-.top-menu .dropdown-theme button:hover {
-  color : var(--color-theme-dark) ;
-}
-button {
+                  .top-menu .menu-links .social-media {
+                      margin-left: 1em ;
+                      font-size: var(--font-size-14);
+                  }
+                  .top-menu .menu-links .social-media a {
+                        margin: 0 0.3rem ;
+                  }
+                  .top-menu .menu-links .social-media a :last-child {
+                      margin : 0 0 0 0.3rem ;
+                  }
+
+
+
+
+                  .top-menu .site-setting{
+                    display : flex ; 
+                       }
+                 
+
+
+ .top-menu  .dropdown-theme {
   background-color: var(--color-theme) ; 
   color: var(--color-white) ;
-  border: none;
+  width: 100;
+  margin: 0;               
+  }
+  
+ button {
+        background-color: var(--color-theme) ; 
+        color: var(--color-white) ;
+        border: none;
+        padding: 0%;
+    }
+ button:hover {
+      color : var(--color-theme-dark) ;
+    }
+
+    .top-menu  .dropdown-theme .dropdown-item{
+      background-color: var(--color-theme) ; 
+      color: var(--color-white) ; 
+      margin: 0;                
+      }
+        .top-menu  .dropdown-menu .dropdown-item:hover {
+        background-color: var(--color-theme-dark) ;
+        color: var(--color-white) ;
+        }
+
+           
+@media (min-width: 578px) {
+    .top-menu .menu-links{
+      display:  block ;
+    }
+  }
+
+
+@media (min-width: 992px ) {
+    .top-menu > .container {
+       justify-content: space-between ;
+    }
+    .top-menu .menu-links links {
+       display : inline ;
+    }
+  }
+  /************************MAin Menu*************************/
+  .main-menu  {
+    color: var(--color-theme-dark);
+   
+ }
+
+  .main-menu > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items : center;
+    padding: 2.2rem 0; 
+  }
+
+ .main-menu .brand {
+     flex: 2; 
+  }
+  .main-menu .search {
+     flex: 4;   
+  }
+  .main-menu .menu-links {
+    flex: 3; 
+    display: flex;
+    justify-content: end;
+    align-items : center; 
+ }
+ .main-menu .menu-links .menu-link {
+  text-decoration: none;
+  margin: .8rem;
+ color: var(--color-theme-dark);
+ 
 }
-button:hover {
-color : var(--color-theme-dark) ;
+.main-menu .menu-links .menu-link:hover {  
+ color: var(--color-theme); 
+}
+.main-menu .menu-links .menu-link :first-child {
+  margin:0  2.4rem 0 0;
+}
+.main-menu .menu-links .menu-link :last-child {
+  margin:0 0 0 0.8rem;
+}
+.main-menu .menu-links .menu-link i{
+   font-size: 0.8rem;
+}
+.main-menu nav{
+  border-top: 1px solid var(--color-gray-2);
+}
+.main-menu  > nav > .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
+.main-menu nav .browser-categories{
+  flex: 2;
+}
 
-
-
+.main-menu nav .special-offer{
+  flex: 7;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}  
 
 /*
-
-
-
-
 
 /***********************************************************************************************************************************/
 /**** search bar bredvid logo  kenkata**********
