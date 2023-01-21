@@ -43,6 +43,21 @@ html , body
  font-weight: var(--font-weight-regular);
  color: var(--color-theme-dark);
 }
+.btn-theme{
+  background-color: var(--color-theme);
+  color: var(--color-white);
+  border-radius: var(--border-radius-medium);
+  font-weight: var(--font-weight-medium);
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+}
+.btn-theme:hover{
+  color: var(--color-theme-dark);
+}
+
+
+
+
 /************************top-menu **************/
   
 /* top-menu */
@@ -53,58 +68,340 @@ html , body
 .top-menu > .container {
         height: 100% ;
         display: flex ;
-        justify-content: space-between ;
+        justify-content: end ;
          align-items: center ;
+         padding: 0;
 }
-.top-menu .menu-links {
+/*.top-menu .menu-links {
     padding: 0 .8rem 0 ;
-}
+}*/
 .top-menu a{
          color: var(--color-white) ;
          text-decoration: none;
          margin:0 1.2rem;
 }
 
-.top-menu a:hover {
-     color: var(--color-theme-dark) ;
-}
+                  .top-menu .menu-links a:hover {
+                      color: var(--color-theme-dark) ;
+                  }
 
-.top-menu .social-media {
-    margin-left: 1em ;
-}
-.top-menu .social-media a {
-      margin: 0 0.3rem ;
-}
-.top-menu .social-media a :last-child {
-    margin : 0 0 0 0.3rem ;
-}
-.top-menu .dropdown-theme button {
-    background-color: var(--color-theme) ; 
-    color: var(--color-white) ;
-    border: none;
-}
-.top-menu .dropdown-theme button:hover {
-  color : var(--color-theme-dark) ;
-}
-button {
+                  .top-menu .menu-links .social-media {
+                      margin-left: 1em ;
+                      font-size: var(--font-size-14);
+                  }
+                  .top-menu .menu-links .social-media a {
+                        margin: 0 0.3rem ;
+                  }
+                  .top-menu .menu-links .social-media a :last-child {
+                      margin : 0 0 0 0.3rem ;
+                  }
+
+
+
+
+                  .top-menu .site-setting{
+                    display : flex ; 
+                       }
+                 
+
+
+ .top-menu  .dropdown-theme {
   background-color: var(--color-theme) ; 
   color: var(--color-white) ;
-  border: none;
+  width: 100%;
+  margin: 0;               
+  }
+  
+ button {
+        background-color: var(--color-theme) ; 
+        color: var(--color-white) ;
+        border: none;
+        padding: 0%;
+    }
+ button:hover {
+      color : var(--color-theme-dark) ;
+    }
+
+    .top-menu  .dropdown-theme .dropdown-item{
+      background-color: var(--color-theme) ; 
+      color: var(--color-white) ; 
+      margin: 0;                
+      }
+        .top-menu  .dropdown-menu .dropdown-item:hover {
+        background-color: var(--color-theme-dark) ;
+        color: var(--color-white) ;
+        }
+
+           
+@media (min-width: 578px) {
+    .top-menu .menu-links{
+      display:  block ;
+    }
+  }
+
+
+@media (min-width: 992px ) {
+    .top-menu > .container {
+       justify-content: space-between ;
+    }
+    .top-menu .menu-links links {
+       display : inline ;
+    }
+  }
+  /************************MAin Menu*************************/
+  .main-menu  {
+    color: var(--color-theme-dark);
+   
+ }
+
+  .main-menu > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items : center;
+    padding: 2.2rem 0; 
+  }
+
+ .main-menu .brand {
+     flex: 2; 
+  }
+  .main-menu .search {
+     flex: 4;   
+  }
+  .main-menu .menu-links {
+    flex: 3; 
+    display: flex;
+    justify-content: end;
+    align-items : center; 
+ }
+ .main-menu .menu-links .menu-link {
+  text-decoration: none;
+  margin: .8rem;
+ color: var(--color-theme-dark);
+ 
 }
-button:hover {
-color : var(--color-theme-dark) ;
+.main-menu .menu-links .menu-link:hover {  
+ color: var(--color-theme); 
+}
+.main-menu .menu-links .menu-link :first-child {
+  margin:0  2.4rem 0 0;
+}
+.main-menu .menu-links .menu-link :last-child {
+  margin:0 0 0 0.8rem;
+}
+.main-menu .menu-links .menu-link i{
+   font-size: 0.8rem;
+}
+.main-menu nav{
+  border-top: 1px solid var(--color-gray-2);
+}
+.main-menu  > nav > .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
+.main-menu nav .browser-categories{
+  flex: 2;
+}
+
+.main-menu nav .special-offer{
+  flex: 7;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}  
+/******************************* first partition ********************/
+/* showcase*/
+.showcase{
+    background-color: var(--color-gray-3);
+}
+.showcase .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.showcase .showcase-body h1{
+    font-family: var(--font-play);
+    font-size: var(--font-size-36);
+
+}
+.showcase .showcase-body h1 strong{
+    font-weight: var(--font-weight-bold);
+    color: var(--color-theme);
+
+}
+
+.showcase .showcase-body img{
+    display: none;
+}
+.btn{
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border-radius: var(--border-radius-medium);
+    font-weight: var(--font-weight-medium);
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+}
+.btn:hover{
+    color: var(--color-gray-1);
+}
+@media (min-width: 992px ) {
 
 
+.showcase .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
 
+    .showcase .showcase-body {
 
-/*
+        align-items: center;
+    }
+ .showcase .showcase-body h1{
+     font-size: var(--font-size-60);
+     font-family: var(--font-play);
+     text-align: center;
+ }
+    .showcase .showcase-body h1 strong{
+        font-weight: var(--font-weight-bold);
+        color:var(--color-theme);
+    }
+    .showcase .showcase-body a{
+      display: inline-block;
+    }
 
+}
 
+@media (min-width: 578px) {
+ .showcase .container{
+     text-align: center;
+ }
+    .showcase .shocase-body.h1{
+        font-size: var(--font-size-36);
+    }
+}
+/********************************* second partition ***************/
+.webshop-info{
+    padding: 4rem 0;
+}
+.webshop-info .container{
 
+    display: flex;
+    justify-content: space-evenly;
 
+}
 
+.webshop-info .info-box{
+    background-color: var(--color-theme-light);
+    display:flex;
+    align-items: center;
+    padding: 1rem;
+    margin:0 1rem;
+    flex:1;
+    border-radius: var(--border-radius-small);
+}
+.webshop-info .info-box:hover{
+    background-color: var(--color-theme);
+    color: var(--color-white)
+
+}
+.webshop-info .info-box:hover h1{
+   color: var(--color-theme-dark);
+}
+.webshop-info:hover .info-box img{
+    filter: sepia(0%) brightness(1000%);
+}
+
+.webshop-info .info-box img{
+    margin-right: 1.5rem;
+}
+
+.webshop-info .info-box h1 {
+    color: var(--color-theme);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-medium) ;
+}
+/*********************************SHOP BY CATEGORY******************/
+.shop-by-category{
+
+}
+.shop-by-category .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 214px);
+    grid-template-rows: repeat(3, 214px);
+    gap:1rem;
+
+}
+.section-title{
+    color: var(--color-theme-dark) ;
+    text-align: center
+}
+.shop-by-category .category-box {
+    background-color: var(--color-gray-1);
+    border-radius : var(--border-radius-small);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.shop-by-category .category-box .category-box-title{
+    background-color: var(--color-theme-dark);
+    color:var(--color-theme);
+    padding: 0.5rem 1rem;
+}
+
+.section-title h1 {
+    font-family: var(--font-play);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-36) ;
+}
+
+.section-title h1 span{
+    color: var(--color-theme) ;
+}
+
+.section-title p {
+    margin: 1rem 0;
+}
+.shop-by-category .category-box .category-box-title {
+    background-color: var(--color-theme-dark);
+    color: var(--color-theme);
+    padding: 0.5rem 1rem;
+    font-weight: var(--font-weight-medium);
+}
+
+#category-box-1{
+    grid-column:1/2 ;
+    grid-row:1/2 ;
+}
+#category-box-2{
+    grid-column:2/4 ;
+    grid-row:1/2 ;
+}
+#category-box-3{
+    grid-column:4/-1 ;
+    grid-row:1/3 ;
+}
+#category-box-4{
+    grid-column:1/3 ;
+    grid-row:2/-1 ;
+}
+#category-box-5{
+    grid-column:3/4 ;
+    grid-row:2/3 ;
+}
+#category-box-6{
+    grid-column:3/5 ;
+    grid-row:3/-1 ;
+}
+#category-box-7{
+    grid-column:5/-1 ;
+    grid-row:3/-1 ;
+}
 /***********************************************************************************************************************************/
 /**** search bar bredvid logo  kenkata**********
 
