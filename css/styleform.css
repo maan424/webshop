@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+:root {
+    --color-theme: #20d3C2 ;
+    --color-theme-light : #EDFCFA ;
+    --color-theme-dark: #222434;
+    --color-dark: #303238;
+    --color-white: #FFFFFF ;
+    --color-gray-0: #AAAAAA ;
+    --color-gray-1: #cccccc ;
+    --color-gray-2: #E3E3E3 ;
+    --color-gray-3:  #EEEEEE ;
+    --color-gray-4:  #F6F6F6 ;
+    --color-product-instock: #82d8C6 ;
+    --color-product-outofstock: #FE6C6C ;
+    --color-theme-dark-light: #303238FF;
+
+    --font-play: 'Play', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+
+    --font-weight-regular: 400 ;
+    --font-weight-medium: 500 ;
+    --font-weight-bold: 700 ;
+    --font-size-14: 1.17rem ;
+    --font-size-16: 1.33rem ;
+    --font-size-18: 1.50rem ;
+    --font-size-24: 2rem ;
+    --font-size-36: 3rem ;
+    --font-size-60: 5rem ;
+
+    --border-radius-small: 8px ;
+    --border-radius-medium: 25px ;
+    --border-radius-rounded: 50% ;
+}
+/***********************************************************************************************
+************************************          General              ********************************************/
+
+html , body
+{
+    font-size: 16px ;
+    line-height: 1.5 ;
+    font-family: var(--font-roboto);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-theme-dark);
+}
+.btn-theme{
+    background-color: var(--color-theme);
+    color: var(--color-white);
+    border-radius: var(--border-radius-medium);
+    font-weight: var(--font-weight-medium);
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+}
+.btn-theme:hover{
+    color: var(--color-theme-dark);
+}
+
+.instock{
+    color:var(--color-product-instock);
+}
+.outofstock{
+    color:var(--color-product-outofstock);
+}
+
+/************************                   top-menu              **************/
+
+/* top-menu */
+.top-menu {
+    background-color : var(--color-theme) ;
+    color: var(--color-white ) ;
+}
+.top-menu > .container {
+    height: 100% ;
+    display: flex ;
+    justify-content: end ;
+    align-items: center ;
+
+}
+/*.top-menu .menu-links {
+    padding: 0 .8rem 0 ;
+}*/
+.top-menu a{
+    color: var(--color-white) ;
+    text-decoration: none;
+    margin:0 1.2rem;
+}
+
+.top-menu .menu-links a:hover {
+    color: var(--color-theme-dark) ;
+}
+
+.top-menu .menu-links .social-media {
+    margin-left: 1em ;
+    font-size: var(--font-size-14);
+}
+.top-menu .menu-links .social-media a {
+    margin: 0 0.3rem ;
+}
+.top-menu .menu-links .social-media a :last-child {
+    margin : 0 0 0 0.3rem ;
+}
+.top-menu .site-setting{
+    display : flex ;
+}
+
+.top-menu  .dropdown-theme {
+    background-color: var(--color-theme) ;
+    color: var(--color-white) ;
+    width: 100%;
+    margin: 0;
+}
+
+button {
+    background-color: var(--color-theme) ;
+    color: var(--color-white) ;
+    border: none;
+    padding: 0%;
+}
+button:hover {
+    color : var(--color-theme-dark) ;
+}
+
+.top-menu  .dropdown-theme .dropdown-item{
+    background-color: var(--color-theme) ;
+    color: var(--color-white) ;
+    margin: 0;
+}
+.top-menu  .dropdown-menu .dropdown-item:hover {
+    background-color: var(--color-theme-dark) ;
+    color: var(--color-white) ;
+}
+.main-menu nav .browse-categories button {
+    background-color: var(--color-theme);
+    color: var(--color-white);
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    transition: 0.15s ease-in-out
+}
+.main-menu nav .browse-categories button:hover {
+    background-color: var(--color-theme-dark);
+    color: var(--color-white) ;
+}
+.main-menu nav .browse-categories button span {
+    display:flex;
+    align-items: center;
+}
+
+
+
+@media (min-width: 578px) {
+    .top-menu .menu-links{
+        display:  block ;
+    }
+}
+
+@media (min-width: 992px ) {
+    .top-menu > .container {
+        justify-content: space-between ;
+    }
+    .top-menu .menu-links {
+        display : inline ;
+    }
+}
+/************************           MAin Menu               *************************/
+.main-menu  {
+    color: var(--color-theme-dark);
+
+}
+
+.main-menu > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items : center;
+    padding: 2.2rem 0;
+}
+
+.main-menu .brand {
+    flex: 2;
+}
+.main-menu .search {
+    flex: 4;
+}
+.main-menu .menu-links {
+    flex: 3;
+    display: flex;
+    justify-content: end;
+    align-items : center;
+}
+.main-menu .menu-links .menu-link {
+    text-decoration: none;
+    margin: .3rem;
+    color: var(--color-theme-dark);
+
+}
+.main-menu .menu-links .menu-link:hover {
+    color: var(--color-theme);
+}
+.main-menu .menu-links .menu-link :first-child {
+    margin:0  2.4rem 0 0;
+}
+.main-menu .menu-links .menu-link :last-child {
+    margin:0 0 0 0.8rem;
+}
+.main-menu .menu-links .menu-link i{
+    font-size: 0.8rem;
+}
+.main-menu nav{
+    border-top: 1px solid var(--color-gray-2);
+}
+.main-menu  > nav > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-menu nav .browser-categories{
+    flex: 2;
+}
+
+.main-menu nav .special-offer{
+    flex: 7;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-top: .3rem;
+    margin-bottom: .3rem;
+}
+
+/*********************************       search up side        ***************************************/
+#search,
+#submit {
+    float: left;
+}
+
+#search {
+
+    height: 35px;
+    width: 380px;
+    border: 1px solid #a4c3ca;
+    font: var(--font-play)
+    background: #f1f1f1;
+    border-radius: 50px 3px 3px 50px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);
+
+}
+
+#submit
+{
+    background-color: var(--color-theme);
+    border-radius: 3px 50px 50px 3px;
+    border: 1px solid ;
+    border-color: var(--color-theme);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3),
+    0 1px 0 rgba(255, 255, 255, 0.3) inset;
+    margin-top: 5px;
+    width: 40px;
+    height: 35px;
+    cursor: pointer;
+    font:var(--font-play);
+    color: var(--color-theme);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+
+#submit:hover {
+    background-color: var(--color-theme);
+
+}
+
+#submit:active {
+    background: var(--color-theme);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+
+/*******************************************************************************************/
+/********************************** black part after menu for form side *******************/
+.site-title{
+    background-color: var(--color-theme-dark-light);
+    color: #ffffff;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+}
+.site-title .container{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+}
+.site-title .container li{
+   color: var(--color-white);
+
+}
+.site-title .container .breadcrumb-item_c{
+
+    color: var(--color-theme);
+}
+.site-title .container .breadcrumb-item_c:hover{
+    color: var(--color-white);
+}
+.site-title h1{
+    color: var(--color-theme);
+    font-size: var(--font-size-24);
+    font-family: var(--font-roboto);
+    font-weight: var(--font-weight-medium);
+    margin: 0;
+
+}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+
+}
+ul,
+.site-title .breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+.site-title .breadcrumb li+li:before {
+
+          color: var(--color-white);
+          content: "/\00a0";
+}
+
+.site-title .breadcrumb li a{
+    color: #0275d8;
+    text-decoration: none;
+}
+
+.site-title .breadcrumb li a:hover{
+        color: #01447e;
+        text-decoration: underline;
+}
+
+
+/*******************************************************************************************/
+/******************************************  register & login         ***************************************/
+.float-container {
+    border: 3px solid #fff;
+    padding: 3%;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.float-child1 {
+    width: 30%;
+    float: left;
+    margin-left: 18%;
+
+}
+.float-child2 {
+    width: 30%;
+    float: left;
+    margin-right: 18%;
+    margin-left: 3%;
+
+
+}
+/*****************************************   register  ***************************************/
+/*********************************************************************************************/
+.float-child2 {
+    font-family:var(--font-roboto);
+    background-color: var(--color-gray-3);
+    padding: 0 18px;
+
+}
+
+
+/* Add padding to containers */
+.container22 {
+    padding: 16px;
+    background-color: var(--color-gray-3);
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-small);
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-small);
+    outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+    background-color: var(--color-theme);
+    color: var(--color-white);
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+    border-radius: var(--border-radius-medium);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    transition: 0.15s ease-in-out
+}
+
+.registerbtn:hover {
+    opacity: 1;
+    background-color: var(--color-theme-dark);
+    color: var(--color-white) ;
+}
+
+
+/* Add a blue text color to links */
+a {
+    color: var(--color-theme);
+    font-family: var(--font-weight-bold);
+    text-decoration: none;
+}
+label {
+    color: var(--color-theme);
+    font-family: var(--font-weight-bold)
+}
+b {
+    color: var(--color-theme-dark);
+    font-family: var(--font-weight-bold)
+}
+.forget_password{
+    float: right;
+}
+.remember_me{
+
+    color: var(--color-dark);
+    padding-bottom: 5%;
+}
+input[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+    display: inline-block;
+    width: auto;
+}
+h4 {
+    display: flex;
+    flex-direction: row;
+    margin: 4%;
+    font-size: var(--font-size-14);
+
+}
+
+h4:before,
+h4:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid ;
+    margin: 2%;
+
+    font-weight: var(--font-weight-bold);
+    border-color: darkgrey;
+    font-family: var(--font-roboto);
+
+
+
+}
+
+
+
+/**********************************************************************************/
+/******************************************   login *******************************/
+.float-child1 {
+    font-family:var(--font-roboto);
+    background-color: var(--color-gray-3);
+    padding: 0 50px;
+}
+
+
+/* style the container */
+.container33 {
+    position: relative;
+    border-radius: 5px;
+    background-color: var(--color-gray-3);
+    padding: 20px 0 30px 0;
+}
+
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+    background-color: #3B5998;
+    color: white;
+    border-radius: var(--border-radius-small);
+    margin-bottom: 2rem;
+    width: 48%;
+    float: left;
+    margin-left: 1%;
+
+}
+
+
+.google {
+    background-color: #1b6ece;
+    color: white;
+    border-radius: var(--border-radius-small);
+    margin-bottom: 2rem;
+    width: 48%;
+    float: right;
+    margin-right: 1%;
+}
+
+/* style the submit button */
+input[type=submit] {
+    background-color: var(--color-theme);
+    color: white;
+    cursor: pointer;
+    border-radius: var(--border-radius-small);
+}
+
+input[type=submit]:hover {
+    background-color: var(--color-theme);
+    border-radius: var(--border-radius-small);
+}
+
+/* Two-column layout */
+.col {
+    float: left;
+    width: 50%;
+    margin: auto;
+    margin-top: 6px;
+}
+
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+    .col {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /* show the hidden text on small screens */
+    .hide-md-lg {
+        display: block;
+        text-align: center;
+    }
+}
+/*****************************************   notification         ****************************************/
+
+.notification {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+
+}
+
+.notification:hover {
+
+}
+
+.notification .badge {
+    position: absolute;
+    top: -10px;
+    left: -1px;
+    border-radius: 50%;
+    background: var(--color-theme);
+    color: white;
+}
